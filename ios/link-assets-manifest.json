@@ -1,0 +1,41 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "assets/fonts/Kodchasan-Bold.ttf",
+      "sha1": "2f11b3863d6ca19a474338b4dd2ce7063f3eb145"
+    },
+    {
+      "path": "assets/fonts/Kodchasan-Medium.ttf",
+      "sha1": "cef78e1ec8da0a554174a7d00bbdc74194b5c324"
+    },
+    {
+      "path": "assets/fonts/Kodchasan-Regular.ttf",
+      "sha1": "cbab45f6c326cb0d05627686af6c380e115b1510"
+    },
+    {
+      "path": "assets/fonts/Kodchasan-SemiBold.ttf",
+      "sha1": "69a203c7351fc672881c07ba5b3b9ff52b3826fc"
+    },
+    {
+      "path": "assets/fonts/Montserrat-Bold.ttf",
+      "sha1": "04052dc3b846609216de1e0cbcec337c6b6e74f6"
+    },
+    {
+      "path": "assets/fonts/Montserrat-ExtraLight.ttf",
+      "sha1": "abca033faae775e4abde4bedfa7e81d25b1f6295"
+    },
+    {
+      "path": "assets/fonts/Montserrat-Medium.ttf",
+      "sha1": "6b57d12e018c64352e202f8ef3bf7f431f76d935"
+    },
+    {
+      "path": "assets/fonts/Montserrat-Regular.ttf",
+      "sha1": "de57aa03e4821fdbe6c34ec2c895e8b5c914e837"
+    },
+    {
+      "path": "assets/fonts/Montserrat-SemiBold.ttf",
+      "sha1": "cb6b2a8e9e661ddd2e0fc42b6dcedf1b503fc350"
+    }
+  ]
+}
