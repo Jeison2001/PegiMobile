@@ -1,10 +1,18 @@
 import React from 'react';
-import {View, Image, Text, StyleSheet} from 'react-native';
+import {View, Image, Text, StyleSheet, Dimensions} from 'react-native';
 import Button from '../../components/Button/Button';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 
-const WelcomeScreen: React.FC = () => {
+type RootStackParamList = {Welcome: undefined; Login: undefined};
+
+type WelcomeScreenProp = {
+  navigation: NativeStackNavigationProp<RootStackParamList, 'Welcome'>;
+};
+
+const WelcomeScreen: React.FC<WelcomeScreenProp> = ({navigation}) => {
+  // Ahora puedes usar navigation.navigate sin error
   const handleLoginPress = () => {
-    // Lógica para manejar el evento de inicio de sesión
+    navigation.navigate('Login');
   };
 
   return (
@@ -28,6 +36,8 @@ const WelcomeScreen: React.FC = () => {
   );
 };
 
+const windowHeight = Dimensions.get('window').height;
+
 const styles = StyleSheet.create({
   container: {
     display: 'flex',
@@ -35,7 +45,8 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
     alignItems: 'center',
     width: '100%',
-    backgroundColor: '#1E1E1E',
+    backgroundColor: 'black',
+    borderWidth: 0,
   },
   backgroundImage: {
     position: 'absolute',
@@ -43,16 +54,19 @@ const styles = StyleSheet.create({
     height: '100%',
   },
   contentContainer: {
-    maxHeight: '50%',
     backgroundColor: '#FFFFFF',
-    padding: '5%',
-    borderTopLeftRadius: 25,
-    borderTopRightRadius: 25,
+    paddingVertical: '5%',
+    paddingHorizontal: '10%',
+    borderTopLeftRadius: 50,
+    borderTopRightRadius: 50,
     alignItems: 'center',
+    width: '100%',
+    paddingBottom: '10%',
+    maxHeight: '50%',
   },
   titleContainer: {
     alignSelf: 'flex-start',
-    marginBottom: '5%',
+    marginBottom: '3%',
   },
   title: {
     color: '#1E1E1E',
@@ -65,13 +79,15 @@ const styles = StyleSheet.create({
     lineHeight: 20,
     fontSize: 14,
     textAlign: 'left',
-    marginBottom: '5%',
+    marginBottom: '10%',
     fontFamily: 'Kodchasan-Medium',
   },
   titleHome: {
     color: '#FFFFFF',
-    fontSize: 64,
+    fontSize: 54,
     fontFamily: 'Kodchasan-Medium',
+    position: 'absolute',
+    top: windowHeight * 0.28,
   },
 });
 
